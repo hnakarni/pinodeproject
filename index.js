@@ -5,7 +5,7 @@ const port = 8001;
 const app = express();
 
 app.get("/", function(req,res){
-    console.log("<h1>HI</h1>");
+    return res.end("<h1>HI</h1>")
 })
 
 app.listen(port, function(err){
