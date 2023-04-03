@@ -4,9 +4,14 @@ const port = 8001;
 
 const app = express();
 
-app.get("/", function(req,res){
-    return res.end("<h1>HI</h1>")
-})
+const path = require('path');
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'views'));
+
+app.use(express.static(path.join(__dirname,'assets')));
+
+app.use('/', require('./routes/index'));
 
 app.listen(port, function(err){
     if(err){
