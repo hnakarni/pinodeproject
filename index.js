@@ -6,6 +6,20 @@ const app = express();
 
 const path = require('path');
 
+const mongoose = require('mongoose');
+
+mongoose.connect("mongodb+srv://rnwdevmansikakani:rnwMansikikani@cluster0.9j5egwl.mongodb.net/homeYC", {
+    useNewUrlParser : true,
+    useUnifiedTopology : true
+}).then(()=>{
+    console.log("db connected1");
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+app.use(express.urlencoded());
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
 
