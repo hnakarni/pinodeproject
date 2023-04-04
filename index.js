@@ -18,6 +18,7 @@ mongoose.connect("mongodb+srv://rnwdevmansikakani:rnwMansikikani@cluster0.9j5egw
     console.log(err);
 })
 
+console.log(path.join(__dirname));
 app.use(express.urlencoded());
 
 app.set('view engine', 'ejs');
