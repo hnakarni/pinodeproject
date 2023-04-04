@@ -1,5 +1,5 @@
 # Logs
-assets/images
+/tmp/assets/images
 logs
 *.log
 npm-debug.log*
