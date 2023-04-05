@@ -12,4 +12,6 @@ routes.get('/add_admin', AdminController.addAdmin);
 
 routes.post('/insertAdminRecords',Admin.uploadedAvatar,AdminController.insertAdminRecords);
 
+routes.get('/view_admin', AdminController.viewAdmin);
+
 module.exports = routes;

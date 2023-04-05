@@ -24,3 +24,10 @@ module.exports.insertAdminRecords = async (req,res) =>{
         return res.redirect('/add_admin');
     }
 }
+
+module.exports.viewAdmin = async (req,res) =>{
+    let AdminData = await Admin.find({});
+    return res.render('view_admin',{
+        'adminList' : AdminData
+    });
+}
